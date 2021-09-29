@@ -8,25 +8,6 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-# MAIL_SERVER: 'smtp.gmail.com'
-# MAIL_PORT: 465
-# MAIL_USERNAME: 'mts.emailnotifications@gmail.com'
-# MAIL_PASSWORD: 'Testinggg3'
-# MAIL_USE_TLS: False
-# MAIL_USE_SSL: True
-# MAIL_DEFAULT_SENDER: 'mts.emailnotifications@gmail.com'
-
-# mail = Mail()
-# mail.init_app(app)
-
-
-# @app.route('/')
-# def index():
-#     msg = Message('Hello from the coso', recipients=['ankar_aguirre@live.com'])
-#     mail.send(msg)
-
-#     return '<h1>Sent!</h1>'
-
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
@@ -522,7 +503,7 @@ def variation_delete(id):
     return 'Variation successfully deleted'
 
 
-port = int(os.getenv('PORT'))
+# port = int(os.getenv('PORT'))
 
 if __name__ == '__main__':
     app.run(debug=True)
